@@ -1,3 +1,14 @@
+# pnqi/ethereum-client
+fork from myxtype/ethereum-client.
+
+## versions:
+- 2022-8-10 修复guzzle依赖版本：
+  从`"guzzlehttp/guzzle": "^6.3"` 改为 `"guzzlehttp/guzzle": ">=6.3"`，这样可以防止与laravel9.x等父级项目依赖的guzzle版本相冲突。
+
+  修复 `Utils::weiToEth()` 非静态函数bug。
+
+------------------------
+
 # ethereum-client
 ethereum rpc client, offline sign, php
 

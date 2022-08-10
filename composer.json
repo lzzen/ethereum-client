@@ -1,16 +1,15 @@
 {
-    "name": "myxtype/ethereum-client",
-    "description": "ethereum rpc client, offline sign, php",
+    "name": "pnqi/ethereum-client",
+    "description": "ethereum rpc client, offline sign, php. fork from myxtype/ethereum-client.",
     "authors": [
         {
-            "name": "赵波",
-            "email": "792598794@qq.com"
+            "name": "pozenqi"
         }
     ],
     "require": {
         "simplito/elliptic-php": "^1.0",
         "kornrunner/keccak": "^1.0",
-        "guzzlehttp/guzzle": "^6.3"
+        "guzzlehttp/guzzle": ">=6.3"
     },
     "autoload": {
         "psr-4": {
