@@ -1,15 +1,16 @@
-# pnqi/ethereum-client
-fork from myxtype/ethereum-client.
+# PHP版以太坊RPC客户端
+Fork from myxtype/ethereum-client.
 
-## versions:
-- 2022-8-10 修复guzzle依赖版本：
+## 更新说明
+- 修复guzzle依赖版本：
+
   从`"guzzlehttp/guzzle": "^6.3"` 改为 `"guzzlehttp/guzzle": ">=6.3"`，这样可以防止与laravel9.x等父级项目依赖的guzzle版本相冲突。
 
-  修复 `Utils::weiToEth()` 非静态函数bug。
+- 修复 `Utils::weiToEth()` 非静态函数。
 
 ------------------------
 
-# ethereum-client
+## ethereum-client
 ethereum rpc client, offline sign, php
 
 PHP版的以太坊RPC客户端，支持离线交易、生成私钥与地址。你不用专门购买一台服务器来运行以太坊客户端。
@@ -18,26 +19,26 @@ PHP版的以太坊RPC客户端，支持离线交易、生成私钥与地址。�
 
 这样不仅高效率且安全（如果你执意要使用服务器来运行以太坊客户端，这个项目也支持）。
 
-# 安装
+## 安装
 composer.json
 ```
 {
     "require": {
-        "myxtype/ethereum-client": "dev-master"
+        "pnqi/ethereum-client": "^1.0"
     }
 }
 ```
 
 然后`composer update`即可。
 
-> 或者直接 `composer require myxtype/ethereum-client:dev-master`
+> 或者直接 `composer require pnqi/ethereum-client`
 
-# 使用
+## 使用
 详细使用请参考`examples`文件夹
 
 你可以在这里：https://infura.io/docs 看到更多可使用的RPC方法。
 
-# 初始化
+## 初始化
 
 初始化你可以直接给一个RPC的连接地址，或者参考`GuzzleHttp Options`给出一些自定义的选项。
 
@@ -57,7 +58,7 @@ $client = new EthereumClient([
 ]);
 ```
 
-# RPC
+## RPC
 
 使用RPC接口非常简单，你直接参考 https://ethereum.gitbooks.io/frontier-guide/content/rpc.html 这里列出的接口使用。
 
@@ -80,7 +81,7 @@ print_r($client->personal_newAccount());
 list($address, $privateKey) = $client->newAccount();
 ```
 
-# 离线创建交易并用节点广播
+## 离线创建交易并用节点广播
 
 你可以在你本地直接发送交易，而不需要私有节点，你只需要连接到公共节点就行。
 
