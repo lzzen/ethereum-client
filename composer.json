@@ -1,6 +1,7 @@
 {
     "name": "pnqi/ethereum-client",
     "description": "ethereum rpc client, offline sign, php. fork from myxtype/ethereum-client.",
+    "license": "MIT",
     "authors": [
         {
             "name": "pozenqi"
