@@ -211,8 +211,12 @@ class Client
         switch ($method) {
             case 'eth_getBalance':
                 return [0 => '', 1 => 'latest'];
-                break;
-            // TODO::more
+            case 'eth_call':
+                return  [0 => '', 1 => 'latest'];
+            case 'eth_getBlockByNumber':
+                return  [0 => '', 1 => true];
+            case 'eth_getTransactionByHash':
+                return  [0 => ''];
             default:
                 // code...
                 break;
